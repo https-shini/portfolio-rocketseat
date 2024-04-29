@@ -1,0 +1,433 @@
+:root {
+    --clr-dark: #070a13;
+    --clr-light: #f1f5f9;
+    --clr-slate400: #94a3b8;
+    --clr-slate600: #475569;
+    --clr-slate800: #1e293b;
+    --clr-rose: #e11d48;
+    --clr-indigo: #4f46e5;
+
+    /* rose rgb(225, 29, 72) */
+    /* indigo rgb(79, 70, 229) */
+
+    /* sizes */
+    --size-xxs: 0.5rem;
+    --size-xs: 0.75rem;
+    --size-sm: 0.875rem;
+    --size-base: 1rem;
+    --size-lg: 1.125rem;
+    --size-xl: 1.25rem;
+    --size-2xl: 1.5rem;
+    --size-3xl: 1.875rem;
+    --size-4xl: 2.25rem;
+    --size-5xl: 3rem;
+    --size-6xl: 3.75rem;
+    --size-7xl: 4.5rem;
+    --size-8xl: 6rem;
+    --size-9xl: 8rem;
+    --size-10xl: 10rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --body-bg-color: #070a13;
+    --text-color: #f1f5f9;
+    --bg-cards: #36454f;
+    --bg-techs: #f1f5f9;
+}
+
+body * {
+    font-family: "Merriweather Sans", sans-serif;
+    color: var(--text-color);
+}
+
+body {
+    height: auto;
+    background: var(--body-bg-color);
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "info social"
+        "footer footer";
+    gap: 60px;
+    padding: 40px 40px 20px 40px;
+    grid-template-columns: 1.2fr 3fr;
+}
+
+/* GERAL CARDS */
+.container .card {
+    background-color: var(--bg-cards);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/*  LEFT SIDE */
+
+.container .left-side {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: max-content;
+}
+
+/* PROFILE */
+
+.container .left-side .profile {
+    padding: 32px 76px 49px 76px;
+    text-align: center;
+}
+
+.container .left-side .profile img {
+    width: 95%;
+    height: 95%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+.container .left-side .profile h1 {
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 29px;
+    margin-bottom: 10px;
+}
+
+.container .left-side .profile p {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.card.profile .button {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+}
+
+.card.profile .button:hover {
+    background-color: #4f46e5;
+}
+
+/*  SOCIAL INFO */
+
+.container .left-side .social-infos {
+    padding: 30px 98px 34px 40px;
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+}
+
+.container .left-side .social-infos h2 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+}
+
+.container .left-side .social-infos h2 a {
+    text-decoration: none;
+}
+
+.container .left-side .social-infos img {
+    height: 30px;
+    width: 30px;
+}
+
+/* TECH INFO */
+.container .left-side .tech-info {
+    width: 100%;
+    padding: 30px;
+}
+
+.container .left-side .tech-info h2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.container .left-side .tech-info .technologies {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.shild {
+    margin: 6px;
+}
+
+.container .left-side .tech-info span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 94px;
+    height: 24px;
+    color: #000000;
+    background-color: var(--bg-techs);
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* EXPERIENCIAS */
+.container .left-side .exp-infos {
+    padding: 30px 0px 30px 20px;
+}
+
+.container .left-side .exp-infos h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.container .left-side .exp-infos ul {
+    padding: 0px 0px 0px 40px;
+}
+
+.container .left-side .exp-infos ul li h3 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    margin-top: 14px;
+}
+.container .left-side .exp-infos ul li p {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+/* EDUCAÇÃO */
+.container .left-side .academic-infos {
+    padding: 30px 0px 30px 20px;
+}
+
+.container .left-side .academic-infos h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.container .left-side .academic-infos ul {
+    padding: 0px 0px 0px 40px;
+}
+
+.container .left-side .academic-infos ul li h3 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 15px;
+    margin-top: 14px;
+}
+.container .left-side .academic-infos ul li p {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+}
+.container .left-side .academic-infos ul li p:nth-child(3) {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+/* RIGHT SIDE */
+.container .right-side {
+    grid-area: social;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: max-content;
+}
+
+/* PROJECTS */
+.container .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container .projects .header {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .projects .header h1 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.container .projects .header a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.container .projects .projects-info {
+    display: flex;
+    gap: 30px;
+}
+
+.container .projects .projects-info > div {
+    flex-grow: 2;
+    padding: 30px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .projects .projects-info div h1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.container .projects .projects-info div h1 img {
+    width: 20px;
+    height: 20px;
+}
+
+.container .projects .projects-info .project-1 {
+    cursor: pointer;
+}
+
+.container .projects .projects-info .project-1 > p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 29px;
+}
+
+.container .projects .projects-info .project-1 .info-aditional {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .projects .projects-info .project-1 .info-aditional div {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .projects .projects-info .project-1 .info-aditional div p {
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.container .projects .projects-info .project-1 .info-aditional div p img {
+    width: 20px;
+    height: 20px;
+}
+
+.container .projects .projects-info .project-1 .info-aditional > p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* POSTS */
+.container .posts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container .posts .header {
+    padding: 30px 0px 30px 30px;
+}
+
+.container .posts .header h1 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.container .posts .post-infos .post-1 {
+    padding: 31px 0px 42px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.container .posts .post-infos img {
+    width: 128px;
+    height: 128px;
+}
+
+.container .posts .post-infos .post-1 h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22.63px;
+    margin-bottom: 5.5px;
+}
+
+.container .posts .post-infos .post-1 p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 12px;
+    margin-right: 20px;
+}
+
+.container .posts .post-infos .post-1 p:nth-child(2) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 24px;
+}
+
+.hashtags {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.container .posts .post-infos .post-1 .hashtags span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17.6px;
+}
+
+/* FOOTER */
+footer {
+    grid-area: footer;
+    text-align: center;
+}
